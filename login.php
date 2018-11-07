@@ -35,7 +35,7 @@ if(isset($_POST["Submit"])){
 		     				?>
 								<script language="javascript">
 								window.alert("Chúc mừng bạn đã đăng nhập thành công!");
-								window.location="home.php"
+								window.location="admin.php"
 								</script>
 							<?php
 								$_SESSION['username']= $user_name;
@@ -59,7 +59,7 @@ if(isset($_POST["Submit"])){
 		<div class="content">
 			<form method="POST" action="login.php">
 				<div class="form">
-					<h2>Login Now</h2>
+					<h2>Admin</h2>
 					<div class="form1">
 						<div class="use_name">
 							<h4>Username:</h4>

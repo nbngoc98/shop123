@@ -2,6 +2,6 @@
    session_start();
    unset($_SESSION["username"]);
    
-   echo 'Bạn đã đăng xuất thành công!';
+   echo '<script type="text/javascript">alert("Bạn đã đăng xuất thành công!")</script>';
    header('Refresh: 2; URL = login.php');
 ?>
