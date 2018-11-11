@@ -6,7 +6,7 @@
 </head>
 <body>
 	<?php 
-		include 'connect.php';
+		include 'config/connect.php';
 		$sql = "SELECT * FROM login";
 		$result = mysqli_query($connect, $sql);
 		// Add User

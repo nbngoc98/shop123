@@ -3,7 +3,7 @@
 error_reporting(0);
 session_start();
 
-include 'connect.php';
+include 'config/connect.php';
 if(isset($_POST["Submit"])){
 		//Validate form
 
@@ -35,7 +35,7 @@ if(isset($_POST["Submit"])){
 		     				?>
 								<script language="javascript">
 								window.alert("Chúc mừng bạn đã đăng nhập thành công!");
-								window.location="admin.php"
+								window.location="index.php"
 								</script>
 							<?php
 								$_SESSION['username']= $user_name;
