@@ -111,8 +111,21 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li ><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Thêm Tour</a></li>
-            <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Thêm danh mục</a></li>
+            <li ><a href="list_tour.php"><i class="fa fa-circle-o"></i> Danh Sách Tour</a></li>
+            <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Thêm Tour</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-pie-chart"></i>
+            <span>Quản Lý Loại Tour</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="list_product.php"><i class="fa fa-circle-o"></i> Danh sách Loại Tour</a></li>
+            <li><a href="add_sp.php"><i class="fa fa-circle-o"></i> Thêm Loại Tour</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -124,7 +137,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="list_product.php"><i class="fa fa-circle-o"></i> Danh sách sản phẩm</a></li>
+            <li><a href="list_product.php"><i class="fa fa-circle-o"></i> Danh sách Thành Viên</a></li>
             <li><a href="add_sp.php"><i class="fa fa-circle-o"></i> Thêm sản phẩm</a></li>
           </ul>
         </li>
