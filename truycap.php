@@ -4,7 +4,7 @@
 			if(isset($_SESSION['username']))
 			{
 				$user_name = $_SESSION['username'];
-				$sql = "SELECT * from login where username LIKE '".$user_name."' AND quyen LIKE '1'";
+				$sql = "SELECT * from admin where userAdmin LIKE '".$user_name."' AND status LIKE '1'";
 				$result = $connect->query($sql);
 			}
 

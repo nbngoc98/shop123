@@ -2,7 +2,7 @@
 	$server = 'localhost'; //$server = '127.0.0.1';
 	$username = 'root';
 	$password = ''; //$password = '';
-	$database = '18_php_shop';
+	$database = 'travel_tour';
 
 	$connect = mysqli_connect($server, $username, $password, $database);
 	if (mysqli_connect_errno()){

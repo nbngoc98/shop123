@@ -26,7 +26,7 @@ if(isset($_POST["Submit"])){
 		}
         if ($check) {
         		$pass1 = md5($pass);
-				$sql = "SELECT * FROM login WHERE username LIKE '".$user_name."' AND password LIKE '".$pass1."'";
+				$sql = "SELECT * FROM admin WHERE userAdmin LIKE '".$user_name."' AND passAdmin LIKE '".$pass1."'";
 				$result = $connect->query($sql);
 
 				if ($result->num_rows == 0) {
@@ -38,8 +38,8 @@ if(isset($_POST["Submit"])){
 								window.location="index.php"
 								</script>
 							<?php
-								$_SESSION['username']= $user_name;
-								$_SESSION['password']= $pass1;
+								$_SESSION['userAdmin']= $user_name;
+								$_SESSION['passAdmin']= $pass1;
 								exit();
 							}
 				$connect->close();

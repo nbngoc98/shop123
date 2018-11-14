@@ -25,7 +25,7 @@
         <!-- /.box-header -->
         <div class="box-body table-responsive no-padding">
           <table class="table table-hover">
-        <?php 
+        <!-- <?php 
       // ket noi database
 
       $sql = "SELECT product.id, product.name, product.description, product.price, product.image, product_categories.name as category_name FROM product INNER JOIN product_categories ON product.category_id = product_categories.id";
@@ -61,7 +61,7 @@
       } else {
         echo "No product category";
       }
-      ?>
+      ?> -->
     </table>
         </div>
       </div>
