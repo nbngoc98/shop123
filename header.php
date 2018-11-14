@@ -154,30 +154,25 @@
             <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Thêm User</a></li>
           </ul>
         </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-pie-chart"></i>
-            <span>Quản Lý Comment</span>
+        <li>
+          <a href="comment.php">
+            <i class="fa fa-th"></i> <span>Comment</span>
             <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
+              <small class="label pull-right bg-green">new</small>
             </span>
           </a>
-          <ul class="treeview-menu">
-            <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> Danh sách User</a></li>
-            <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Thêm User</a></li>
-          </ul>
         </li>
         <li class="treeview">
           <a href="#">
             <i class="fa fa-pie-chart"></i>
-            <span>Quản Lý Khuyến Mãi</span>
+            <span>Slideshow</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> Danh sách User</a></li>
-            <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Thêm User</a></li>
+            <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> Danh Sách Khuyến Mãi</a></li>
+            <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Thêm Khuyến Mãi</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -190,22 +185,9 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> Danh sách User</a></li>
-            <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Thêm User</a></li>
           </ul>
         </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-pie-chart"></i>
-            <span>Phản Hồi Của Khách Hàng</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> Danh sách User</a></li>
-            <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Thêm User</a></li>
-          </ul>
-        </li>
+        <li><a href="phanhoi.php"><i class="fa fa-book"></i> <span>Phản Hồi Của Khách Hàng</span></a></li>
       </ul>
     </section>
     <!-- /.sidebar -->
