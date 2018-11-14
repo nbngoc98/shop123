@@ -180,6 +180,19 @@
             <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Thêm User</a></li>
           </ul>
         </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-pie-chart"></i>
+            <span>Phản Hồi Của Khách Hàng</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> Danh sách User</a></li>
+            <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Thêm User</a></li>
+          </ul>
+        </li>
       </ul>
     </section>
     <!-- /.sidebar -->
