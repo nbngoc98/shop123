@@ -1,6 +1,5 @@
 <footer class="main-footer">
     <div class="pull-right hidden-xs">
-      <b>Version</b> 2.4.0
     </div>
     <strong>Copyright &copy; 2018 <a href="#">Nguyễn Bảo Ngọc</a> & <a href="#">Nguyễn Duy Thường</a>
   </footer>
@@ -19,5 +18,14 @@
 <script src="js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="js/demo.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script>
+  $(function () {
+    //Date picker
+    $('#datepicker').datepicker({
+      autoclose: true
+    })
+  })
+</script>
 </body>
 </html>

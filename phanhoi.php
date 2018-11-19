@@ -1,48 +1,71 @@
 <?php
-    include 'config/connect.php';
+include 'config/connect.php';
+?>
+<?php include "header.php" ?>
 
-  ?>
-  <?php include "header.php" ?>
-
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content">
-    <div class="tab-pane" id="timeline">
-                <!-- The timeline -->
-                <ul class="timeline timeline-inverse">
-                  <!-- timeline time label -->
-                  <li class="time-label">
-                        
-                  </li>
-                  <!-- /.timeline-label -->
-                  <!-- timeline item -->
-                  <li>
-                    <i class="fa fa-comments bg-yellow"></i>
+          <div class="row">
+            <div class="col-xs-12">
+                  <div class="box">
+                    <div class="box-header">
+                      <h3 class="box-title">Feedback List</h3>
 
-                    <div class="timeline-item">
-                      <span class="time"><i class="fa fa-clock-o"></i> 12:05</span>
+                      <div class="box-tools">
+                        <div class="input-group input-group-sm" style="width: 150px;">
+                          <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
 
-                      <h3 class="timeline-header"><a href="#">Support Team</a> sent you an email</h3>
-
-                      <div class="timeline-body">
-                        Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles,
-                        weebly ning heekya handango imeem plugg dopplr jibjab, movity
-                        jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle
-                        quora plaxo ideeli hulu weebly balihoo...
-                      </div>
-                      <div class="timeline-footer">
-                        <a class="btn btn-danger btn-xs">Delete</a>
+                          <div class="input-group-btn">
+                            <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </li>
-                  <!-- END timeline item -->
-                  <li>
-                    <i class="fa fa-clock-o bg-gray"></i>
-                  </li>
-                </ul>
-              </div>
-      </section>
-    </div>
-  <!-- /.content-wrapper -->
-  <?php include "footer.php" ?>
+                    <!-- /.box-header -->
+                    <div class="box-body table-responsive no-padding">
+                      <table class="table table-hover">
+                        <?php 
+                        // ket noi database
+
+                         $sql = "SELECT * FROM phanhoi";
+                        $result = mysqli_query($connect, $sql);
+                        if ($result->num_rows > 0) {
+                           echo"
+                                      <tr style='width: 100%'>
+                                        <th style='width: 10%'>ID Feedback</th>
+                                        <th style='width: 15%'>Sender's Name</th>
+                                        <th style='width: 20%'>Sender'sEmail</th>
+                                        <th style='width: 10%'>Title</th>
+                                        <th style='width: 35%'>Content</th>
+                                        <th style='width: 8%'>Sent Date</th>
+                                        <th></th>
+                                      </tr>";
+                          while ($row = $result->fetch_assoc()) {
+                            $id = $row['MaPH'];
+                            echo"
+                                      <tr>
+                                        <td>" . $row['MaPH']. "</td>
+                                        <td>" . $row['TenNguoiGui']. "</td>
+                                        <td>" . $row['EmailNguoiGui']. "</td>
+                                        <td>" . $row['TieuDe']."</td>
+                                        <td>" . $row['NoiDung']."</td>
+                                        <td>" . $row['NgayGui']."</td>
+                                        <td><a href='delete_phanhoi.php?idDelete=$id'><i class='fa fa-fw fa-close'></i></a></td>
+                                      </tr>";
+                                   
+                          }
+                        } else {
+                          echo "No Feedback!";
+                        }
+                        ?>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+          </div>
+    </section>
+</div>
+<!-- /.content-wrapper -->
+<?php include "footer.php" ?>

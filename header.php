@@ -19,9 +19,8 @@
   <link rel="stylesheet" href="css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="css/AdminLTE.min.css">
-
   <link rel="stylesheet" href="css/_all-skins.min.css">
-
+  <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
@@ -171,8 +170,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> Danh Sách Khuyến Mãi</a></li>
-            <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Thêm Khuyến Mãi</a></li>
+            <li><a href="list_sale.php"><i class="fa fa-circle-o"></i> Danh Sách Khuyến Mãi</a></li>
+            <li><a href="add_sale.php"><i class="fa fa-circle-o"></i> Thêm Khuyến Mãi</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -184,7 +183,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> Danh sách User</a></li>
+            <li><a href="user_admin.php"><i class="fa fa-circle-o"></i> Danh sách User</a></li>
           </ul>
         </li>
         <li><a href="phanhoi.php"><i class="fa fa-book"></i> <span>Phản Hồi Của Khách Hàng</span></a></li>
