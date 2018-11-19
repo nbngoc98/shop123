@@ -5,15 +5,15 @@
     $sql = "SELECT * FROM loaitour";
     $result = mysqli_query($connect, $sql);
     if (isset($_POST['add_sale'])) {
-      $id_Sales = $_POST['id_Sales'];
+       $MaSale = $_POST['MaSale'];
       $title = $_POST['title'];
-      $introduce = $_POST['introduce'];
-      $content = $_POST['content'];
-      $adult_Price = $_POST['adult_Price'];
-      $children_Price = $_POST['children_Price'];
-      $departure_Day = $_POST['departure_Day'];
-      $departure_Location = $_POST['departure_Location'];
-      $maloai = $_POST['maloai'];
+      $gioithieu = $_POST['gioithieu'];
+      $noidung = $_POST['noidung'];
+      $gianguoilon = $_POST['gianguoilon'];
+      $giatreem = $_POST['giatreem'];
+      $ngaykhoihanh = $_POST['ngaykhoihanh'];
+      $diemkhoihanh = $_POST['diemkhoihanh'];
+      $MaLoai = $_POST['MaLoai'];
 
       //lấy ngày hiện tại
       $created = date("Y-m-d h:i:s");
@@ -37,11 +37,9 @@
       move_uploaded_file($imageUploadd['tmp_name'], $pathSavee.$imageNamee);
 
       $sql = "INSERT INTO sales (MaSale, MaLoai, title,gioithieu, noidung, image, gianguoilon, giatreem, ngaykhoihanh, diemkhoihanh, ngaythemSale, slideshow) 
-            VALUES($id_Sales, $maloai, '$title', '$introduce', '$content', '$imageName', $adult_Price, $children_Price, '$departure_Day', '$departure_Location', '$created', '$imageNamee')";
+            VALUES($MaSale, $MaLoai, '$title', '$gioithieu', '$noidung', '$imageName', '$gianguoilon', '$giatreem', $ngaykhoihanh, '$diemkhoihanh','$created', '$imageNamee')";
             
       mysqli_query($connect, $sql);
-      // var_dump($id_Sales,$maloai,$title,$introduce,$content,$imageName,$adult_Price,$children_Price,$departure_Day,$departure_Location,$created,$imageNamee);
-      // exit();
       // chuyen trang
       redirectPage('list_sale.php');
 
@@ -52,7 +50,7 @@
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    <section class="content">
+        <section class="content">
       <div class="row">
         <div class="col-xs-12">
             <div class="box box-warning">
@@ -66,14 +64,14 @@
                 <div class="box-body">
                   <div class="row">
                     <div class="col-xs-1"><label>ID Sales:</label>
-                      <input type="text" class="form-control" placeholder="" name="id_Sales">
+                      <input type="text" class="form-control" placeholder="" name="MaSale">
                     </div>
                     <div class="col-xs-2"><label>Type Tour:</label>
                       <div class="form-group">
-                          <select class="form-control" name="maloai">
+                          <select class="form-control" name="MaLoai">
                             <?php 
                                 while ($row = $result->fetch_assoc()) {
-                                  $id   = $row['MaLoai'];
+                                  $id   = $row['MaLoai']; 
                                   $name = $row['TenLoai'];
                                   echo "<option value='$id'>$name</option>";
                                 }
@@ -85,27 +83,27 @@
                       <input type="text" class="form-control" placeholder="" name="title">
                     </div>
                     <div class="col-xs-5"><label>Introduce:</label>
-                      <input type="text" class="form-control" placeholder="" name="introduce">
+                      <input type="text" class="form-control" placeholder="" name="gioithieu">
                     </div>
                   </div>
                 </div>
                 <!-- textarea -->
                 <div class="form-group">
                   <label>Content</label>
-                  <textarea class="form-control" rows="3" placeholder="" name="content"></textarea>
+                  <input type="text" class="form-control" rows="3" placeholder="" name="noidung"></input>
                 </div>
                 <div class="box-body">
                   <div class="row">
                     <div class="col-xs-2"><label>Adult Price:</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="" name="adult_Price">
-                            <span class="input-group-addon" style="color: red">VNĐ</span>
+                            <input type="text" class="form-control" placeholder="" name="gianguoilon">
+                            <span class="input-group-addon" style="color: red">VNÐ</span>
                         </div>
                     </div>
                     <div class="col-xs-2"><label>Children's Price:</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="" name="children_Price">
-                            <span class="input-group-addon" style="color: red">VNĐ</span>
+                            <input type="text" class="form-control" placeholder="" name="giatreem">
+                            <span class="input-group-addon" style="color: red">VNÐ</span>
                         </div>
                     </div>
                     <div class="col-xs-3"><label>Departure Day:</label>
@@ -114,29 +112,25 @@
                           <div class="input-group-addon">
                             <i class="fa fa-calendar"></i>
                           </div>
-                          <input type="text" class="form-control pull-right" id="datepicker" name="departure_Day">
+                          <input type="text" class="form-control pull-right" id="datepicker" name="ngaykhoihanh">
                         </div>
                       </div>
                     </div>
                     <div class="col-xs-5"><label>Departure Location:</label>
-                      <input type="text" class="form-control" placeholder="" name="departure_Location">
+                      <input type="text" class="form-control" placeholder="" name="diemkhoihanh">
                     </div>
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="exampleInputFile">File Image</label>
                   <input type="file" id="exampleInputFile" name="image">
-
-                  <p class="help-block">Upload photos from your computer.</p>
                 </div>
                 <div class="form-group">
                   <label for="exampleInputFile">File Image Slideshow</label>
                   <input type="file" id="exampleInputFile" name="slideshow">
-
-                  <p class="help-block">Upload photos from your computer.</p>
                 </div>
 
-                <button type="submit" class="btn btn-block btn-primary btn-lg" name="add_sale">Submit</button>
+              <button type="submit" class="btn btn-block btn-primary btn-lg" name="add_sale">Submit</button>
                 
 
               </form>
@@ -146,6 +140,6 @@
         </div>
       </div>
     </section>
-  </div>
+      </div>
   <!-- /.content-wrapper -->
   <?php include "footer.php" ?>
